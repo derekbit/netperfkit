@@ -1,0 +1,19 @@
+server:
+    ip: 10.20.91.105
+tests:
+    - bandwidth:
+        packet_sizes: [64, 256, 512, 1024, 2048, 4096, 16384]
+        sessions: [1, 2, 4, 8]
+        duration: 60
+    - tcp_stream:
+        packet_sizes: [64, 256, 512, 1024, 2048, 4096, 16384]
+        sessions: [1, 2, 4, 8]
+        duration: 60
+    - tcp_rr:
+        packet_sizes: [1, 64, 256, 512] 
+        sessions: [1, 25, 50, 75, 100]
+        duration: 60
+    - tcp_crr:
+        packet_sizes: [1, 64, 256, 512] 
+        sessions: [1, 25, 50, 75, 100]
+        duration: 60
