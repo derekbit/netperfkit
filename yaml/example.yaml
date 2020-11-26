@@ -1,12 +1,12 @@
 server:
-    ip: 10.20.91.105
+    ip: 10.0.0.1
 tests:
     - bandwidth:
-        packet_sizes: [64, 256, 512, 1024, 2048, 4096, 16384]
+        packet_sizes: [64, 256, 512, 1024, 4096, 16384, 65536, 131072]
         sessions: [1, 2, 4, 8]
         duration: 60
     - tcp_stream:
-        packet_sizes: [64, 256, 512, 1024, 2048, 4096, 16384]
+        packet_sizes: [64, 256, 512, 1024, 4096, 16384, 65536, 131072]
         sessions: [1, 2, 4, 8]
         duration: 60
     - tcp_rr:
